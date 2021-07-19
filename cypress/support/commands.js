@@ -42,8 +42,5 @@ Cypress.Commands.add('logout', () => {
     should('contain','Sign out').
     click()
 
-    // assertion to verify that the user is logout
-    cy.wait(1000)
-    cy.url().should('include','controller=authentication')
-    cy.get('.page-heading').should('contain','Authentication')
+    
 })

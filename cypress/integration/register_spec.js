@@ -1,4 +1,8 @@
 ///<reference types ="Cypress"/>
+
+//in order to register one must use a new email address so there may be an error while running the scripts.
+// better use a new email before running the script
+
 describe("registration", () => {
     beforeEach('visits Sign In page', () => {
         //using baseURL
@@ -47,7 +51,7 @@ describe("registration", () => {
         cy.get('#customer_firstname').clear().type('Ram')
         cy.get('#phone_mobile').clear().type('01453768')
         cy.get('#alias').clear().type('paknajol')
-        // cy.get('#submitAccount ').should("be.enabled").click()
+        cy.get('#submitAccount ').should("be.enabled").click()
 
     });
 })
